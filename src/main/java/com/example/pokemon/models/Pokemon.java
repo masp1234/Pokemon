@@ -2,6 +2,8 @@ package com.example.pokemon.models;
 
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 
@@ -9,6 +11,9 @@ import javax.persistence.Id;
 public class Pokemon {
 
     @Id
+
+    // Hvis det er en autoincremented Primary Key. Gælder ikke her
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private int pokedexNumber;
     private String name;
     private int speed;

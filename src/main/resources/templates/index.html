@@ -3,22 +3,10 @@
 <head>
     <meta charset="UTF-8"/>
     <title></title>
-    <link rel="stylesheet" th:href="@{/styles/file-name-here.css}"/>
+    <link rel="stylesheet" href="../static/styles/file-name-here.css" th:href="@{/styles/file-name-here.css}"/>
 </head>
 <body>
-<h1> List of Pokemon</h1>
-<table>
-    <tr>
-        <th>Pokedex number</th>
-        <th>Name</th>
-    </tr>
+<a href="/allPokemon">Click here to see all pokemon</a>
 
-<tr th:each="pokemon: ${pokemon}">
-    <td th:text="${pokemon.pokedexNumber}"></td>
-    <td th:text="${pokemon.name}"></td>
-
-</tr>
-
-</table>
 </body>
 </html>
